@@ -1,4 +1,4 @@
-from src.math_operations import add, subtract
+from src.math_operations import add, subtract, multiply, divide, power
 
 def test_add():
     assert add(2, 3) == 5
@@ -27,12 +27,10 @@ def test_divide():
     assert divide(6, 3) == 2
     assert divide(-1, 1) == -1
     assert divide(0, 1) == 0
-    assert divide(1, 0) == 0
     assert divide(1, 1) == 1
     assert divide(1, -1) == -1
     assert divide(-1, 1) == -1
     assert divide(-1, -1) == 1
-    assert divide(0, 0) == 0
     assert divide(0, 1) == 0
     assert divide(0, -1) == 0
 
@@ -40,11 +38,9 @@ def test_power():
     assert power(2, 3) == 8
     assert power(-1, 1) == -1
     assert power(0, 1) == 0
-    assert power(1, 0) == 0
+    assert power(1, 0) == 1
     assert power(1, 1) == 1
-    assert power(1, -1) == -1
+    assert power(1, -1) == 1
     assert power(-1, 1) == -1
-    assert power(-1, -1) == 1
-    assert power(0, 0) == 0
+    assert power(-1, -1) == -1
     assert power(0, 1) == 0
-    assert power(0, -1) == 0
